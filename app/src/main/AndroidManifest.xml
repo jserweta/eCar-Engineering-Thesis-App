@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.agh.engineeringthesis.eCar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.agh.engineeringthesis.eCar.AddNotificationActivity"
+            android:label="@string/notifications_add" />
+        <activity
+            android:name="com.agh.engineeringthesis.eCar.NotificationsListActivity"
+            android:label="@string/notifications" />
+        <activity
+            android:name="com.agh.engineeringthesis.eCar.ChartsActivity"
+            android:label="@string/charts" />
+        <activity
+            android:name="com.agh.engineeringthesis.eCar.AddExpenseActivity"
+            android:label="@string/new_expense" />
+        <activity
+            android:name="com.agh.engineeringthesis.eCar.StatisticsActivity"
+            android:label="@string/statistics" />
+        <activity
+            android:name="com.agh.engineeringthesis.eCar.AppInfoActivity"
+            android:label="@string/info_app" />
+        <activity
+            android:name="com.agh.engineeringthesis.eCar.CalculatorActivity"
+            android:label="@string/calculator" />
+        <activity
+            android:name="com.agh.engineeringthesis.eCar.AddVehicleActivity"
+            android:label="@string/new_vehicle" />
+        <activity
+            android:name="com.agh.engineeringthesis.eCar.AddFuellingActivity"
+            android:label="@string/refuelling" />
+        <activity
+            android:name="com.agh.engineeringthesis.eCar.MainActivity"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.agh.engineeringthesis.eCar.notifications.NotificationReceiver"/>
+
+    </application>
+
+</manifest>

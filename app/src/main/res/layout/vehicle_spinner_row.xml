@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vehicle_spinner_row_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="10dp">
+
+        <TextView
+            android:id="@+id/spinner_letter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:text="A"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ocr"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/spinner_vehicle_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_vehicle_mileage"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toEndOf="@+id/spinner_letter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/spinner_vehicle_mileage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/spinner_vehicle_name"
+            android:text="Mileage"
+            android:layout_marginLeft="15dp"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spinner_letter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

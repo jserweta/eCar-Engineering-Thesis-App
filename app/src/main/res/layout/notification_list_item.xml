@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    app:cardCornerRadius="4dp"
+    android:layout_marginBottom="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/bell"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_notifications"
+            android:focusable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:weightSum="2"
+            android:layout_marginStart="10dp"
+            android:id="@+id/linearLayoutTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bell"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/notification_name_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:text="notifTitle"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                 />
+            <ImageView
+                android:id="@+id/del_notification"
+                android:layout_width="20dp"
+                android:layout_weight="0.3"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/ic_delete"
+                android:focusable="false"/>
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearLayout"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:weightSum="2"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/bell"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop">-->
+
+        <TextView
+
+            android:id="@+id/notification_type_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:text="notifType"
+            android:layout_marginStart="10dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bell"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop" />
+
+        <TextView
+            android:id="@+id/notification_date_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="date"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bell"
+            app:layout_constraintTop_toBottomOf="@+id/notification_type_field" />
+<!--        </LinearLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

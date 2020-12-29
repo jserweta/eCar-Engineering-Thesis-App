@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="15dp">
+<!--Informacje ogólne-->
+        <LinearLayout
+            android:id="@+id/vehicle_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingBottom="3dp">
+
+            <ImageView
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/ic_car_24" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1.6"
+                android:text="@string/general_info"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:id="@+id/separator1"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/vehicle_general"
+            android:background="@color/colorAccent"/>
+
+        <LinearLayout
+            android:id="@+id/nazwa_pojazdu"
+            android:layout_below="@+id/separator1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/veihicle_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/vehicle_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/veihicle_name"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/przebieg"
+            android:layout_below="@+id/nazwa_pojazdu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/przebieg_uppercase"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/vehicle_mileage"
+                android:text="@string/przebieg_uppercase"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/typ_pojazdu"
+            android:layout_below="@+id/przebieg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/vehicle_type"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/vehicle_type"
+                android:text="@string/vehicle_type"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+        </LinearLayout>
+<!--Spalanie-->
+        <LinearLayout
+            android:id="@+id/fuelling_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/typ_pojazdu"
+            android:paddingStart="20dp"
+            android:paddingBottom="3dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/gas_station" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1.6"
+                android:text="@string/consumption"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:id="@+id/separator2"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fuelling_general"
+            android:background="@color/colorAccent"/>
+
+        <LinearLayout
+            android:id="@+id/avg_consum"
+            android:layout_below="@+id/separator2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/consumption_avg"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="0,00  "
+                android:id="@+id/avg_consumption_all"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewEnd"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/consumption_unit"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewStart"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/last_fuel_price"
+            android:layout_below="@+id/avg_consum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/last_fuel_price"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="0,00  "
+                android:id="@+id/last_fuel_price_text"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewEnd"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+
+                android:text="@string/fuel_price_unit"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewStart"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/last_consumption"
+            android:layout_below="@+id/last_fuel_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/last_consumption"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="0,00  "
+                android:id="@+id/last_consum_text"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewEnd"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/consumption_unit"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewStart"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+<!--  Koszty-->
+        <LinearLayout
+            android:id="@+id/cost_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/last_consumption"
+            android:paddingStart="20dp"
+            android:paddingBottom="3dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/ic_local_atm_24px" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1.6"
+                android:text="@string/costs"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:id="@+id/separator3"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/cost_general"
+            android:background="@color/colorAccent"/>
+
+        <LinearLayout
+            android:id="@+id/sum_cost_fuel"
+            android:layout_below="@+id/separator3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cost_fuel_sum"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="0,00  "
+                android:id="@+id/summary_fuel_cost"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewEnd"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="@string/price_unit"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewStart"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/sum_cost_costs"
+            android:layout_below="@+id/sum_cost_fuel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cost_sum"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="0,00  "
+                android:id="@+id/other_costs"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewEnd"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="@string/price_unit"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewStart"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

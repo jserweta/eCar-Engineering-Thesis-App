@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/main_page"
+            android:title="@string/strona_glowna"
+            android:icon="@drawable/ic_home_24px"/>
+        <item
+            android:id="@+id/refuelling_list"
+            android:title="@string/lista_tankowan"
+            android:icon="@drawable/ic_gas_station_white"/>
+
+        <item
+            android:id="@+id/expense_list"
+            android:title="@string/lista_wydatkow"
+            android:icon="@drawable/ic_local_atm"/>
+        <item
+            android:id="@+id/vehicle_manager"
+            android:title="@string/pojazdy"
+            android:icon="@drawable/ic_car_24"/>
+
+
+    </group>
+
+    <group android:id="@+id/middle_menu">
+        <item
+            android:id="@+id/notifications_item"
+            android:title="@string/notifications"
+            android:icon="@drawable/ic_notifications"/>
+        <item
+            android:id="@+id/stats_item"
+            android:title="@string/statistics"
+            android:icon="@drawable/ic_stats"/>
+        <item
+            android:id="@+id/charts_item"
+            android:title="@string/charts"
+            android:icon="@drawable/ic_outline_insert_chart_24"/>
+        <item
+            android:id="@+id/calculator_item"
+            android:title="@string/calculator"
+            android:icon="@drawable/ic_outline_calculate_24"/>
+
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/app_info"
+            android:title="@string/info_app"
+            android:icon="@drawable/ic_info"/>
+
+    </group>
+
+</menu>

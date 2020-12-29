@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".CalculatorActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/my_action_bar"/>
+
+        <!--Distance layout-->
+        <LinearLayout
+            android:id="@+id/distance_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.81"
+                android:text="@string/distance"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintDimensionRatio="H, 1:6" />
+
+            <EditText
+                android:id="@+id/distance_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="odległość [km]"
+                android:textSize="14sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/distance"
+                app:layout_constraintHorizontal_bias="0.5"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <!--Ilość paliwa zatankowana layout-->
+        <LinearLayout
+            android:id="@+id/fuel_liter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/distance_layout">
+
+            <TextView
+                android:id="@+id/fuel_liter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.81"
+                android:text="@string/fuel_amount"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintDimensionRatio="H, 1:6" />
+
+            <EditText
+                android:id="@+id/fuel_liter_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="ilość paliwa [l]"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintBaseline_toBaselineOf="@+id/fuel_liter_field"
+                app:layout_constraintHorizontal_bias="0.5" />
+        </LinearLayout>
+        <!--Spalanie wynik layout-->
+        <LinearLayout
+            android:id="@+id/cons_result_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginEnd="40dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fuel_liter_layout">
+
+            <TextView
+                android:id="@+id/cons_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/consumption"
+                android:textSize="18sp"
+                android:gravity="end"
+                android:textColor="@color/colorAccent"
+
+                app:layout_constraintDimensionRatio="H, 1:6" />
+
+            <TextView
+                android:id="@+id/cons_result_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="0.00"
+                android:text=""
+                android:textAlignment="viewEnd"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!--Obliczanie spalania przycisk   -->
+        <Button
+            android:id="@+id/consumption_calc_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calc_consumption"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.856"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_result_layout" />
+
+        <!--Cena za litr layout-->
+        <LinearLayout
+            android:id="@+id/price_per_liter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consumption_calc_btn">
+
+            <TextView
+                android:id="@+id/price_per_liter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.81"
+                android:text="@string/price_per_liter"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintDimensionRatio="H, 1:6" />
+
+            <EditText
+                android:id="@+id/price_per_liter_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="cena za litr [PLN]"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintBaseline_toBaselineOf="@+id/price_per_liter"
+                app:layout_constraintHorizontal_bias="0.5" />
+        </LinearLayout>
+
+        <!--Zużycie paliwa layout    -->
+        <LinearLayout
+            android:id="@+id/fuel_consumtion_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price_per_liter_layout">
+
+            <TextView
+                android:id="@+id/cost_fuel_consumption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.81"
+                android:text="@string/consumption"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintDimensionRatio="H, 1:6" />
+
+            <EditText
+                android:id="@+id/fuel_consumption_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="zużycie paliwa [l/100km]"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cost_fuel_consumption"
+                app:layout_constraintHorizontal_bias="0.5" />
+        </LinearLayout>
+        <!--Liczba pasażerów layout-->
+        <LinearLayout
+            android:id="@+id/passenger_amount_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fuel_consumtion_layout">
+
+            <TextView
+                android:id="@+id/passenger_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.81"
+                android:text="@string/passenger"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintDimensionRatio="H, 1:6" />
+
+            <EditText
+                android:id="@+id/passenger_amount_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="liczba pasażerów"
+                android:textSize="14sp"
+                android:inputType="number"
+                app:layout_constraintBaseline_toBaselineOf="@+id/passenger_amount"
+                app:layout_constraintHorizontal_bias="0.5" />
+        </LinearLayout>
+
+
+
+        <!--Koszt całkowity wynik layout-->
+        <LinearLayout
+            android:id="@+id/cost_result_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginEnd="40dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passenger_amount_layout">
+
+            <TextView
+                android:id="@+id/cost_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/total_cost"
+                android:textSize="18sp"
+                android:gravity="end"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintDimensionRatio="H, 1:6" />
+
+            <TextView
+                android:id="@+id/cost_result_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="0.00"
+                android:text=""
+                android:textAlignment="viewEnd"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!--Koszt jednostowy wynik layout-->
+        <LinearLayout
+            android:id="@+id/cost_peruser_result_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginEnd="40dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cost_result_layout">
+
+            <TextView
+                android:id="@+id/cost_peruser_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/trip_cost"
+                android:textSize="18sp"
+                android:gravity="end"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintDimensionRatio="H, 1:6" />
+
+            <TextView
+                android:id="@+id/cost_peruser_result_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="0.00"
+                android:text=""
+                android:textAlignment="viewEnd"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!--Obliczanie kosztu przycisk   -->
+        <Button
+            android:id="@+id/cost_calc_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calc_cost"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.856"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cost_peruser_result_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

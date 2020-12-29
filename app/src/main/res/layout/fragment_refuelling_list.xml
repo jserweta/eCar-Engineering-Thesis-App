@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.RefuellingListFragment">
+
+    <!--RecyclerView container-->
+    <com.agh.engineeringthesis.eCar.util.EmptyRecyclerView
+        android:id="@+id/refuellings_list"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        android:padding="4dp"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/fuelling_list_item"/>
+
+    <TextView
+        android:id="@+id/no_refuellings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/no_refuellings"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_fuelling_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/ic_add_white" />
+</RelativeLayout>

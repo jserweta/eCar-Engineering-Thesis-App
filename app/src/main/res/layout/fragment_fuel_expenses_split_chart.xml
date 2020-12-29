@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FuelExpensesSplitChartFragment"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/fuel_expenses_split_pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TableLayout
+            android:id="@+id/table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fuel_expenses_split_pie_chart"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+
+
+</ScrollView>

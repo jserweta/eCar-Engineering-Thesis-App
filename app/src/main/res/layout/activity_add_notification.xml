@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNotificationActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/my_action_bar"/>
+
+    <LinearLayout
+        android:id="@+id/notifi_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:weightSum="2">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.2"
+            app:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_description_24" />
+        <EditText
+            android:id="@+id/notification_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1.8"
+            android:ems="10"
+            android:hint="@string/notifications_name"
+            android:inputType="text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notifi_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/notifi_name_layout"
+        android:weightSum="2">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.2"
+            app:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_label_24" />
+        <Spinner
+            android:id="@+id/notification_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="type"
+            android:textSize="15sp"  />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/notifi_date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/notifi_type_layout"
+        android:weightSum="2">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.2"
+            app:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_outline_calendar" />
+        <TextView
+            android:id="@+id/notification_date_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:ems="10"
+            android:layout_weight="1.8"
+            android:hint="@string/set_date_time"
+            android:clickable="true"
+            android:textSize="15sp"
+            android:focusable="true" />
+    </LinearLayout>
+    <!--Add refuelling button-->
+    <Button
+        android:id="@+id/add_notification_btn"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="@string/notifications_add"
+        android:textSize="15sp"
+        android:drawableRight="@drawable/ic_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notifi_date_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
