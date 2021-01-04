@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.agh.engineeringthesis.eCar.MainActivity
+import com.agh.engineeringthesis.eCar.activities.MainActivity
 import com.agh.engineeringthesis.eCar.R
 import com.agh.engineeringthesis.eCar.logic.ExpensesStatisticsGenerator
 import com.agh.engineeringthesis.eCar.logic.RefuellingStatisticsGenerator

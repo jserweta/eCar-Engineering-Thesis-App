@@ -11,34 +11,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.agh.engineeringthesis.eCar.AddNotificationActivity"
+            android:name="com.agh.engineeringthesis.eCar.activities.AddNotificationActivity"
             android:label="@string/notifications_add" />
         <activity
-            android:name="com.agh.engineeringthesis.eCar.NotificationsListActivity"
+            android:name="com.agh.engineeringthesis.eCar.activities.NotificationsListActivity"
             android:label="@string/notifications" />
         <activity
-            android:name="com.agh.engineeringthesis.eCar.ChartsActivity"
+            android:name="com.agh.engineeringthesis.eCar.activities.ChartsActivity"
             android:label="@string/charts" />
         <activity
-            android:name="com.agh.engineeringthesis.eCar.AddExpenseActivity"
+            android:name="com.agh.engineeringthesis.eCar.activities.AddExpenseActivity"
             android:label="@string/new_expense" />
         <activity
-            android:name="com.agh.engineeringthesis.eCar.StatisticsActivity"
+            android:name="com.agh.engineeringthesis.eCar.activities.StatisticsActivity"
             android:label="@string/statistics" />
         <activity
-            android:name="com.agh.engineeringthesis.eCar.AppInfoActivity"
+            android:name="com.agh.engineeringthesis.eCar.activities.AppInfoActivity"
             android:label="@string/info_app" />
         <activity
-            android:name="com.agh.engineeringthesis.eCar.CalculatorActivity"
+            android:name="com.agh.engineeringthesis.eCar.activities.CalculatorActivity"
             android:label="@string/calculator" />
         <activity
-            android:name="com.agh.engineeringthesis.eCar.AddVehicleActivity"
+            android:name="com.agh.engineeringthesis.eCar.activities.AddVehicleActivity"
             android:label="@string/new_vehicle" />
         <activity
-            android:name="com.agh.engineeringthesis.eCar.AddFuellingActivity"
+            android:name="com.agh.engineeringthesis.eCar.activities.AddFuellingActivity"
             android:label="@string/refuelling" />
         <activity
-            android:name="com.agh.engineeringthesis.eCar.MainActivity"
+            android:name="com.agh.engineeringthesis.eCar.activities.MainActivity"
             android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

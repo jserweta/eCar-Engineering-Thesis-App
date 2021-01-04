@@ -1,4 +1,4 @@
-package com.agh.engineeringthesis.eCar
+package com.agh.engineeringthesis.eCar.activities
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -16,6 +16,7 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.viewpager.widget.ViewPager
+import com.agh.engineeringthesis.eCar.R
 import com.agh.engineeringthesis.eCar.adapters.MainFragmentPagerAdapter
 import com.agh.engineeringthesis.eCar.adapters.VehicleAdapter
 import com.agh.engineeringthesis.eCar.db.VehicleContract
@@ -31,7 +32,10 @@ class MainActivity : AppCompatActivity(), ViewPager.OnPageChangeListener { //Nav
     private var selectVehicleSpinner: Spinner? = null
     private var currentVehicle: Vehicle? = null
     val drawerToogle by lazy {
-        ActionBarDrawerToggle(this, drawer_general_layout, toolbar, R.string.drawer_oper, R.string.drawer_close)
+        ActionBarDrawerToggle(this, drawer_general_layout, toolbar,
+            R.string.drawer_oper,
+            R.string.drawer_close
+        )
     }
     private lateinit var broadcastUpdateSpinner: BroadcastReceiver
 

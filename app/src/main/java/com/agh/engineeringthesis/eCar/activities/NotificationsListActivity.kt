@@ -1,10 +1,11 @@
-package com.agh.engineeringthesis.eCar
+package com.agh.engineeringthesis.eCar.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.agh.engineeringthesis.eCar.R
 import com.agh.engineeringthesis.eCar.adapters.NotificationListAdapter
 import com.agh.engineeringthesis.eCar.db.VehicleContract
 import com.agh.engineeringthesis.eCar.db.VehicleDBHelper

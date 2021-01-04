@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.agh.engineeringthesis.eCar.AddFuellingActivity
-import com.agh.engineeringthesis.eCar.MainActivity
+import com.agh.engineeringthesis.eCar.activities.AddFuellingActivity
+import com.agh.engineeringthesis.eCar.activities.MainActivity
 import com.agh.engineeringthesis.eCar.R
 import com.agh.engineeringthesis.eCar.adapters.RefuellingListAdapter
 import com.agh.engineeringthesis.eCar.db.VehicleContract

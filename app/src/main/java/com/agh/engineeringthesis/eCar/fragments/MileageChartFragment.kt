@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import com.agh.engineeringthesis.eCar.ChartsActivity
+import com.agh.engineeringthesis.eCar.activities.ChartsActivity
 import com.agh.engineeringthesis.eCar.R
 import com.agh.engineeringthesis.eCar.logic.RefuellingStatisticsGenerator
 import com.agh.engineeringthesis.eCar.util.CustomMarkerView

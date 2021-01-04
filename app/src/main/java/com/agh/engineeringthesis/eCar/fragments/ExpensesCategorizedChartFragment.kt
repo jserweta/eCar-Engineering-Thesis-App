@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.*
 
 import androidx.fragment.app.Fragment
-import com.agh.engineeringthesis.eCar.ChartsActivity
+import com.agh.engineeringthesis.eCar.activities.ChartsActivity
 import com.agh.engineeringthesis.eCar.R
 import com.agh.engineeringthesis.eCar.logic.ExpensesStatisticsGenerator
 import com.agh.engineeringthesis.eCar.model.Vehicle

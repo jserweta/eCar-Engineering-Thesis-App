@@ -1,10 +1,11 @@
-package com.agh.engineeringthesis.eCar
+package com.agh.engineeringthesis.eCar.activities
 
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.widget.Toolbar
+import com.agh.engineeringthesis.eCar.R
 import com.agh.engineeringthesis.eCar.db.VehicleContract
 import com.agh.engineeringthesis.eCar.db.VehicleDBHelper
 import com.agh.engineeringthesis.eCar.model.Expense

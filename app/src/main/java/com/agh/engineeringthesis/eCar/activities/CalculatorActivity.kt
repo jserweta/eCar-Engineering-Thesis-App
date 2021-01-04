@@ -1,10 +1,11 @@
-package com.agh.engineeringthesis.eCar
+package com.agh.engineeringthesis.eCar.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import com.agh.engineeringthesis.eCar.R
 import kotlinx.android.synthetic.main.activity_calculator.*
 
 class CalculatorActivity : AppCompatActivity() {

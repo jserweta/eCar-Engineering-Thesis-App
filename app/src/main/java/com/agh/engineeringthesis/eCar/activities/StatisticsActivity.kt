@@ -1,8 +1,9 @@
-package com.agh.engineeringthesis.eCar
+package com.agh.engineeringthesis.eCar.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
+import com.agh.engineeringthesis.eCar.R
 import com.agh.engineeringthesis.eCar.adapters.StatsTabPagerAdapter
 import com.agh.engineeringthesis.eCar.db.VehicleContract
 import com.agh.engineeringthesis.eCar.db.VehicleDBHelper

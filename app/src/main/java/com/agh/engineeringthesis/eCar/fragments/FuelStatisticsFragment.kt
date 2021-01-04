@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.agh.engineeringthesis.eCar.R
-import com.agh.engineeringthesis.eCar.StatisticsActivity
+import com.agh.engineeringthesis.eCar.activities.StatisticsActivity
 import com.agh.engineeringthesis.eCar.logic.RefuellingStatisticsGenerator
 import com.agh.engineeringthesis.eCar.model.Vehicle
 
