@@ -30,13 +30,4 @@ class CustomMarkerView(context: Context, layoutResource: Int, fragment: String) 
 
         super.refreshContent(e, highlight)
     }
-
-//    override fun getX(): Float {
-//        return (-(width / 2)).toFloat()
-//    }
-//
-//
-//    override fun getY(): Float {
-//        return (-height).toFloat()
-//    }
 }

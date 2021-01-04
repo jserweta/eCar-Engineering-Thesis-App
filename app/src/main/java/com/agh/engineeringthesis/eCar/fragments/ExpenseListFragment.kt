@@ -54,7 +54,7 @@ class ExpenseListFragment : Fragment() {
     }
 
     private fun getExpenses() =
-        if (currentVehicle != null)
+        if (currentVehicle != null) {
             dbHelper!!.getExpensesForVehicle(currentVehicle!!.getId())
-        else listOf()
+        }else listOf()
 }

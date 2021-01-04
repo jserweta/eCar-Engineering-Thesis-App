@@ -90,19 +90,13 @@ class AddNotificationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetL
                 addNotification(currentVehicle!!)
                 Toast.makeText(this, "Dodano nowe powiadomienie!", Toast.LENGTH_LONG).show()
 
+                val notifyTime = savedDate!!.timeInMillis
 
-                val intent = Intent(this@AddNotificationActivity.applicationContext, NotificationReceiver::class.java)
-                val pendingIntent = PendingIntent.getBroadcast(
-                    this@AddNotificationActivity,
-                    0,
-                    intent,
-                    PendingIntent.FLAG_UPDATE_CURRENT
-                )
+                val intent = Intent(applicationContext, NotificationReceiver::class.java)
+                val pendingIntent = PendingIntent.getBroadcast(applicationContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
 
                 val alarmManager: AlarmManager = this.getSystemService(ALARM_SERVICE) as AlarmManager
-                alarmManager.set(AlarmManager.RTC_WAKEUP,
-                    savedDate!!.timeInMillis,
-                    pendingIntent)
+                alarmManager.set(AlarmManager.RTC_WAKEUP, notifyTime, pendingIntent)
                 finish()
             }
         }
